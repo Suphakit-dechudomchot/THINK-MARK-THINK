@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif; /* ใช้ฟอนต์ Kanit ให้ดูทันสมัย */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* ไล่สีแบบนุ่มนวลขึ้น */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.2); /* เอฟเฟกต์กระจกใส */
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+p {
+    margin-bottom: 30px;
+    font-weight: 300;
+    font-size: 1.1rem;
+}
+
+button {
+    width: 150px;
+    height: 150px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #764ba2;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.1) rotate(5deg); /* ขยายและหมุนเล็กน้อยให้ดูขี้เล่น */
+    background: #f0f0f0;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+button:active {
+    transform: scale(0.95); /* เอฟเฟกต์ตอนกดปุ่ม */
+}
+
+/* --- Media Queries สำหรับมือถือหน้าจอเล็ก --- */
+@media (max-width: 480px) {
+    button {
+        width: 140px;  /* ลดขนาดปุ่มลงในมือถือ */
+        height: 140px;
+        font-size: 1rem;
+    }
+    
+    .card {
+        padding: 20px 15px;
+    }
+}
